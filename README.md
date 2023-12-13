@@ -1,4 +1,11 @@
-Expense Tracker is a simple application that allows the user to track the spending on a daily basis. It has components like date, category and amount. It allows the user to edit or delete the entries!
+# EXPENSE TRACKER
+
+Expense Tracker is a simple web application that allows the user to track spending daily. It has components like date, category, and amount. It allows the user to edit or delete the entries.
+
+### PROJECT SPECIFICATION
+
+
+
 
 
 
