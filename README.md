@@ -1,10 +1,10 @@
 # EXPENSE TRACKER
-Expense Tracker is a simple web application that allows the user to track spending daily.
+Expense Tracker is a simple web application that allows the user to track daily expenses.
 
 ### PROJECT SPECIFICATION
-* Landing page is made using HTML, CSS, Bootstrap, and Javascript
-* Stores the date, category of item bought, and daily money spent
-* The user can edit or delete the entries
+* The landing page is made using HTML, CSS, Bootstrap, and Javascript.
+* Stores the date, category of the item bought, and daily money spent.
+* The user can edit or delete the entries.
 
 
 
