@@ -1,4 +1,3 @@
-// add expense to table and local storage
 function addExpense() {
     var date = document.getElementById('date').value;
     var category = document.getElementById('category').value;
@@ -6,7 +5,7 @@ function addExpense() {
     var editIndex = document.getElementById('editIndex').value;
 
     if (editIndex == '') {
-        var expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+        var expenses = JSON.parse(localStorage.getItem('expenses')) || [];        
         expenses.push({date: date, category: category, amount: amount});
         localStorage.setItem('expenses', JSON.stringify(expenses));
         var tableBody = document.getElementById('expenseTable').getElementsByTagName('tbody')[0];
@@ -20,7 +19,7 @@ function addExpense() {
     return false;
 }
 
-// reset the form
+
 function resetForm() {
     document.getElementById('date').value = '';
     document.getElementById('category').value = '';
@@ -29,7 +28,7 @@ function resetForm() {
     document.getElementById('addButton').innerHTML = 'Add Expense';
 }
 
-// delete expense from table and local storage
+
 function deleteExpense(row) {
     row.parentNode.removeChild(row);
     var expenses = JSON.parse(localStorage.getItem('expenses'))
@@ -38,7 +37,7 @@ expenses.splice(rowIndex, 1);
 localStorage.setItem('expenses', JSON.stringify(expenses));
 }
 
-// edit expense in form
+
 function editForm(row) {
 var rowIndex = row.rowIndex - 1;
 var expenses = JSON.parse(localStorage.getItem('expenses')) || [];
@@ -50,7 +49,7 @@ document.getElementById('editIndex').value = rowIndex;
 document.getElementById('addButton').innerHTML = 'Update Expense';
 }
 
-// edit expense in table and local storage
+
 function editExpense(index, date, category, amount) {
 var expenses = JSON.parse(localStorage.getItem('expenses')) || [];
 expenses[index] = {date: date, category: category, amount: amount};
@@ -62,7 +61,7 @@ tableRow.cells[2].innerHTML = amount;
 resetForm();
 }
 
-// show expenses in table
+
 function showExpenses() {
 var expenses = JSON.parse(localStorage.getItem('expenses')) || [];
 var tableBody = document.getElementById('expenseTable').getElementsByTagName('tbody')[0];
